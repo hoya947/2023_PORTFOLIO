@@ -1,0 +1,478 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    line-height: 1;
+    color: #202202;
+    overflow-x: hidden;
+    font-family: 'Pretendard-Regular';
+}
+
+.inner {
+    max-width: 1440px;
+    width: calc(100%);
+    margin: 0 auto;
+}
+
+header {
+    max-width: 1920px;
+    width: 100%;
+    height: 100vh;
+    background-color: #f5f5f5;
+    position: relative;
+}
+
+header>h1 {
+    position: absolute;
+    top: 35px;
+    left: 35px;
+}
+
+header .inner {
+    width: 100%;
+    height: 100vh;
+    font-size: 50px;
+}
+
+header .inner .ball1 {
+    width: 110px;
+    height: 110px;
+    background-color: #a9d0ff;
+    border-radius: 50%;
+    position: absolute;
+    top: 25%;
+    left: 30%;
+
+    animation-name: ball;
+
+    animation-duration: 4s;
+
+    animation-iteration-count: infinite;
+
+    animation-direction: alternate-reverse;
+}
+
+@keyframes ball {
+    0% {
+        background-color: #a9d0ff;
+        width: 30px;
+        height: 30px;
+    }
+
+    50% {
+        background-color: #5a9dee;
+        transform: translateX(300px);
+        width: 50px;
+    }
+
+    100% {
+        background-color: skyblue;
+        border-radius: 0;
+    }
+}
+
+header .inner .text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+header .inner .ball2 {
+    width: 150px;
+    height: 150px;
+    background-color: #5a9dee;
+    position: absolute;
+    top: 65%;
+    right: 30%;
+    animation: ball2 3s infinite alternate linear;
+}
+
+@keyframes ball2 {
+    0% {
+        background-color: #5a9dee;
+    }
+
+    50% {
+        background-color: #a9d0ff;
+    }
+
+    100% {
+        background-color: lightblue;
+        border-radius: 30px;
+    }
+
+}
+
+
+header .right {
+    position: absolute;
+    top: 35px;
+    right: 35px;
+}
+
+
+/* cont02 😊 */
+
+.cont02 {
+    max-width: 1920px;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.cont02>img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.cont02 .inner .box {
+    width: 1920px;
+    display: flex;
+}
+
+.cont02 .inner .box .left {
+    width: 960px;
+}
+
+.cont02 .inner .box .left .res {
+    font-size: 25px;
+    position: absolute;
+    top: 100px;
+    left: 260px;
+}
+
+.cont02 .inner .box .left .text {
+    font-size: 20px;
+    position: absolute;
+    left: 240px;
+    bottom: 220px;
+    line-height: 25px;
+}
+
+.cont02 .inner .box .left .text p {
+    font-weight: 100;
+}
+
+.cont02 .inner .box .left .text p>span {
+    font-weight: bold;
+}
+
+
+.cont02 .inner .box .left .res>p.result {
+    display: inline-block;
+    font-size: 25px;
+    line-height: 30px;
+    border-right: 1px solid #000;
+    padding-right: 2px;
+    box-sizing: border-box;
+    animation: cursor 0.4s infinite;
+    font-weight: bold;
+}
+
+@keyframes cursor {
+    0% {
+        border-right: 1px solid #fff;
+    }
+
+    50% {
+        border-right: 1px solid #000;
+    }
+
+    100% {
+        border-right: 1px solid #fff;
+    }
+}
+
+.cont02 .inner .box .right {
+    width: 960px;
+    height: 100%;
+}
+
+.cont02 .inner .box .right .list {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.cont02 .inner .box .right .list .item {
+    margin-top: 50px;
+}
+
+.cont02 .inner .box .right .list .item>h3 {
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+
+.cont02 .inner .box .right .list .item>div ul li {
+    width: 370px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-weight: 100;
+}
+
+.cont02 .inner .box .right .list .item>div ul li span {
+    font-weight: bold;
+}
+
+
+.cont02 .inner .box .right .list .item:last-child>div img {
+    margin-right: 15px;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+
+/* cont03😁 */
+
+.cont03 {
+    width: 100%;
+    height: 100vh;
+    background-color: #f6f6f6;
+}
+
+.cont03 .swiper-slide .inner .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cont03 .swiper-slide .inner .flex .left>h3 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.cont03 .swiper-slide .inner .flex .left>p {
+    margin-bottom: 100px;
+}
+
+.cont03 .swiper-slide .inner .flex .left .left_inner {
+    margin-bottom: 50px;
+}
+
+.cont03 .swiper-slide .inner .flex .left .left_inner .li1 {
+    margin-bottom: 15px;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont03 .swiper-slide .inner .flex .left .left_inner .li1 span {
+    font-weight: bold;
+}
+
+.cont03 .swiper-slide .inner .flex .left .text {
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 50px;
+}
+
+.cont03 .swiper-slide .inner .flex .left .btn a {
+    border: 1px solid #202020;
+    display: block;
+    width: 170px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.cont03 .swiper-slide .inner .flex .left .btn a:hover {
+    background-color: #5a9dee;
+    transition: 0.5s;
+    color: #fff;
+    border: 1px solid #5a9dee;
+}
+
+.cont03 .swiper-slide .inner .flex .right div img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+
+}
+
+
+/* cont04 */
+.cont04 .inner>h1 {
+    margin-top: 100px;
+    font-size: 40px;
+}
+
+.cont04 .inner .item1 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cont04 .inner .item1>img {
+    width: 975px;
+    height: 555px;
+}
+
+.cont04 .inner .item1 .text {
+    width: 350px;
+    color: #202020;
+}
+
+.cont04 .inner .item1 .text h3 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.cont04 .inner .item1 .text>p {
+    margin-bottom: 30px;
+}
+
+.cont04 .inner .item1 .text .text_inner>div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.cont04 .inner .item1 .text .text_inner>div p {
+    font-weight: bold;
+}
+
+.cont04 .inner .item1 .text .btn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+
+}
+
+.cont04 .inner .item1 .text .btn a {
+    width: 170px;
+    height: 35px;
+    border: 1px solid #202020;
+    border-radius: 30px;
+    display: block;
+    text-align: center;
+    line-height: 35px;
+    transition: 0.5s;
+}
+
+.cont04 .inner .li2 .text>h3 {
+    color: #0074e8;
+}
+
+.cont04 .inner .li2 .text .btn a:hover {
+    background-color: #0074e8;
+    transition: 0.5s;
+    color: #fff;
+    border: 1px solid #0074e8;
+}
+
+.cont04 .inner .li3 .text>h3 {
+    color: #ffc501;
+}
+
+.cont04 .inner .li3 .text .btn a:hover {
+    background-color: #ffc501;
+    transition: 0.5s;
+    color: #fff;
+    border: 1px solid #ffc501;
+}
+
+.cont04 .inner .li4 .text .btn a:hover {
+    background-color: #202020;
+    transition: 0.5s;
+    color: #fff;
+}
+
+.cont04 .inner .li5 .text>h3 {
+    color: #b4ac9f;
+}
+
+.cont04 .inner .li5 .text .btn a:hover {
+    background-color: #b4ac9f;
+    transition: 0.5s;
+    color: #fff;
+    border: 1px solid #b4ac9f;
+}
+
+.cont04 .inner .li6 .text>h3 {
+    color: #b3a290;
+}
+
+.cont04 .inner .li6 .text .btn a:hover {
+    background-color: #b3a290;
+    transition: 0.5s;
+    color: #fff;
+    border: 1px solid #b3a290;
+}
+
+
+/* footer😎 */
+footer {
+    width: 100%;
+    height: 500px;
+    background-color: #f5f5f5;
+}
+
+footer>.inner {
+    position: relative;
+}
+
+footer .inner .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+}
+
+footer .inner .top a {
+    font-size: 20px;
+}
+
+footer .inner .top a:hover {
+    color: #c8c8c8;
+}
+
+footer .inner .bottom {
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+footer .inner .bottom p {
+    font-size: 20px;
+}
+
+footer .inner .bottom h3 {
+    text-align: right;
+    font-size: 40px;
+    line-height: 50px;
+}
