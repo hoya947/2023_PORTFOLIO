@@ -11,9 +11,13 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="lib/jquery-3.7.0.min.js"></script>
+    <script src="lib/dist/fullpage.min.js"></script>
+
     <script>
 
         $(function () {
+
+
 
             String.prototype.toKorChars = function () {
                 var cCho = ['ㄱ', 'ㄲ', 'ㄴ', 'ㄷ', 'ㄸ', 'ㄹ', 'ㅁ', 'ㅂ', 'ㅃ', 'ㅅ', 'ㅆ', 'ㅇ', 'ㅈ', 'ㅉ', 'ㅊ', 'ㅋ', 'ㅌ', 'ㅍ', 'ㅎ'],
@@ -97,6 +101,26 @@
                 },
             });
 
+
+            //슬라이드2
+            var swiper = new Swiper(".mySwiper2", {
+                effect: "coverflow",
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: "auto",
+                coverflowEffect: {
+                    rotate: 50,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows: true,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                },
+            });
+
+
         }); //jQuery end
 
 
@@ -111,29 +135,29 @@
 
     <div id="wrap">
 
-        <header>
-
-            <h1><img src="img/logo.png" alt="kimyoungho"></h1>
-
-            <div class="inner">
-
-                <div class="ball1"></div>
-
-                <div class="text">
-                    <h1>PORT<br>FOLIO</h1>
-                </div> <!-- .text end -->
-
-                <div class="ball2"></div>
-
-            </div> <!-- .inner end -->
-
-            <div class="right">
-                <h3><img src="img/2.png" alt="2023"></h3>
-            </div> <!-- .right end -->
-
-        </header>
-
         <main>
+
+            <header>
+
+                <h1><img src="img/logo.png" alt="kimyoungho"></h1>
+
+                <div class="inner">
+
+                    <div class="ball1"></div>
+
+                    <div class="text">
+                        <h1>PORT<br>FOLIO</h1>
+                    </div> <!-- .text end -->
+
+                    <div class="ball2"></div>
+
+                </div> <!-- .inner end -->
+
+                <div class="right">
+                    <h3><img src="img/2.png" alt="2023"></h3>
+                </div> <!-- .right end -->
+
+            </header>
 
             <section class="cont02">
                 <img src="img/my.png" alt="캐릭터">
@@ -212,400 +236,6 @@
 
             </section> <!-- .cont02 end -->
 
-
-            <section class="cont03">
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-
-                        <div class="swiper-slide">
-                            <div class="inner">
-                                <div class="flex">
-                                    <div class="left">
-                                        <h3>종이호일 상세페이지</h3>
-                                        <p>상세페이지 제작 및 디자인</p>
-                                        <div class="left_inner">
-
-                                            <div class="li1">
-                                                <span>기여도</span>
-                                                <div>100%</div>
-                                            </div>
-
-                                            <div class="li1">
-                                                <span>TOOL</span>
-                                                <div>Photoshop, Illustrator</div>
-                                            </div>
-
-                                            <div class="li1">
-                                                <span>COLOR</span>
-                                                <div>
-                                                    <img src="img/cont03/01_01.png" alt="">
-                                                    <img src="img/cont03/01_02.png" alt="">
-                                                    <img src="img/cont03/01_03.png" alt="">
-                                                </div>
-                                            </div>
-
-                                            <div class="li1">
-                                                <span>PRODUCT</span>
-                                                <div>에어프라이어 종이호일</div>
-                                            </div>
-
-                                        </div> <!-- .left_inner end -->
-
-                                        <div class="text">
-                                            <p>많은 연령층들에게 인기가 많은 에어프라이어 <br />
-                                                그중에서 빠질 수 없는 최고의 필수 템 종이호일</p>
-                                        </div> <!-- .text -->
-
-                                        <div class="btn">
-                                            <a href="img/page/01.jpg" target="_blank">상세페이지</a>
-                                        </div> <!-- .btn end -->
-                                    </div> <!-- .left end -->
-
-                                    <div class="right">
-                                        <div>
-                                            <img src="img/cont03/cont03_01.png" alt="종이호일">
-
-                                        </div>
-                                    </div> <!-- .right end -->
-
-                                </div> <!-- .flex end -->
-                            </div> <!-- .inner -->
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="inner">
-                                <div class="flex">
-                                    <div class="left">
-                                        <h3>도라지즙 상세페이지</h3>
-                                        <p>상세페이지 제작 및 디자인</p>
-                                        <div class="left_inner">
-
-
-                                            <div class="li1">
-                                                <span>기여도</span>
-                                                <div>100%</div>
-                                            </div>
-
-                                            <div class="li1">
-                                                <span>TOOL</span>
-                                                <div>Photoshop, Illustrator</div>
-                                            </div>
-
-                                            <div class="li1">
-                                                <span>COLOR</span>
-                                                <div>
-                                                    <img src="img/cont03/02_01.png" alt="">
-                                                    <img src="img/cont03/02_02.png" alt="">
-                                                </div>
-                                            </div>
-
-                                            <div class="li1">
-                                                <span>PRODUCT</span>
-                                                <div>도라지즙</div>
-                                            </div>
-
-                                        </div> <!-- .left_inner end -->
-
-                                        <div class="text">
-                                            <p>영양이 풍부하고 그 중에서도 더욱 귀한 <br />
-                                                5년근 도라지만 엄선하여 만든 도라지즙</p>
-                                        </div> <!-- .text -->
-
-                                        <div class="btn">
-                                            <a href="img/page/02.jpg" target="_blank">상세페이지</a>
-                                        </div> <!-- .btn end -->
-                                    </div> <!-- .left end -->
-
-                                    <div class="right">
-                                        <div>
-                                            <img src="img/cont03/cont03_02.png" alt="종이호일">
-
-                                        </div>
-                                    </div> <!-- .right end -->
-
-                                </div> <!-- .flex end -->
-                            </div> <!-- .inner -->
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="inner">
-                                <div class="flex">
-                                    <div class="left">
-                                        <h3>흑마늘즙 상세페이지</h3>
-                                        <p>상세페이지 제작 및 디자인</p>
-                                        <div class="left_inner">
-
-                                            <div class="li1">
-                                                <span>기여도</span>
-                                                <div>100%</div>
-                                            </div>
-
-                                            <div class="li1">
-                                                <span>TOOL</span>
-                                                <div>Photoshop, Illustrator</div>
-                                            </div>
-
-                                            <div class="li1">
-                                                <span>COLOR</span>
-                                                <div>
-                                                    <img src="img/cont03/03_01.png" alt="">
-                                                    <img src="img/cont03/03_02.png" alt="">
-                                                </div>
-                                            </div>
-
-                                            <div class="li1">
-                                                <span>PRODUCT</span>
-                                                <div>흑마늘즙</div>
-                                            </div>
-
-                                        </div> <!-- .left_inner end -->
-
-                                        <div class="text">
-                                            <p>물 많이 탄 맹물같은 건강즙이 아닙니다. <br>
-                                                착향료, 설탕 등을 넣어 진한 맛을 흉내내지 않습니다. <br>
-                                                정직하게 만든 흑마늘즙</p>
-                                        </div> <!-- .text -->
-
-                                        <div class="btn">
-                                            <a href="img/page/03.jpg" target="_blank">상세페이지</a>
-                                        </div> <!-- .btn end -->
-                                    </div> <!-- .left end -->
-
-                                    <div class="right">
-                                        <div>
-                                            <img src="img/cont03/cont03_03.png" alt="종이호일">
-
-                                        </div>
-                                    </div> <!-- .right end -->
-
-                                </div> <!-- .flex end -->
-                            </div> <!-- .inner -->
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="inner">
-                                <div class="flex">
-                                    <div class="left">
-                                        <h3>산수유즙 상세페이지</h3>
-                                        <p>상세페이지 제작 및 디자인</p>
-                                        <div class="left_inner">
-
-                                            <div class="li1">
-                                                <span>기여도</span>
-                                                <div>100%</div>
-                                            </div>
-
-                                            <div class="li1">
-                                                <span>TOOL</span>
-                                                <div>Photoshop, Illustrator</div>
-                                            </div>
-
-                                            <div class="li1">
-                                                <span>COLOR</span>
-                                                <div>
-                                                    <img src="img/cont03/04_01.png" alt="">
-                                                    <img src="img/cont03/04_02.png" alt="">
-                                                </div>
-                                            </div>
-
-                                            <div class="li1">
-                                                <span>PRODUCT</span>
-                                                <div>구례산 산수유</div>
-                                            </div>
-
-                                        </div> <!-- .left_inner end -->
-
-                                        <div class="text">
-                                            <p>착색료를 넣거나 설탕 등을 넣어 진한색과 맛을 흉내 낸 산수유즙이 아닙니다<br />
-                                                산수유열매를 많이 넣어 만든 100% 구례산 진한 산수유즙</p>
-                                        </div> <!-- .text -->
-
-                                        <div class="btn">
-                                            <a href="img/page/04.jpg" target="_blank">상세페이지</a>
-                                        </div> <!-- .btn end -->
-                                    </div> <!-- .left end -->
-
-                                    <div class="right">
-                                        <div>
-                                            <img src="img/cont03/cont03_04.png" alt="종이호일">
-
-                                        </div>
-                                    </div> <!-- .right end -->
-
-                                </div> <!-- .flex end -->
-                            </div> <!-- .inner -->
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="inner">
-                                <div class="flex">
-                                    <div class="left">
-                                        <h3>호박즙 상세페이지</h3>
-                                        <p>상세페이지 제작 및 디자인</p>
-                                        <div class="left_inner">
-
-                                            <div class="li1">
-                                                <span>기여도</span>
-                                                <div>100%</div>
-                                            </div>
-
-                                            <div class="li1">
-                                                <span>TOOL</span>
-                                                <div>Photoshop, Illustrator</div>
-                                            </div>
-
-                                            <div class="li1">
-                                                <span>COLOR</span>
-                                                <div>
-                                                    <img src="img/cont03/05_01.png" alt="">
-                                                    <img src="img/cont03/05_02.png" alt="">
-                                                </div>
-                                            </div>
-
-                                            <div class="li1">
-                                                <span>PRODUCT</span>
-                                                <div>국내산 100% 호박즙</div>
-                                            </div>
-
-                                        </div> <!-- .left_inner end -->
-
-                                        <div class="text">
-                                            <p>인위적으로 열이나 압력을 가하지않고<br />
-                                                호박을 5시간 동안 효소로 분해하는 효소발효공법을 <br>
-                                                통해 생산한 호박즙
-                                            </p>
-                                        </div> <!-- .text -->
-
-                                        <div class="btn">
-                                            <a href="img/page/05.jpg" target="_blank">상세페이지</a>
-                                        </div> <!-- .btn end -->
-                                    </div> <!-- .left end -->
-
-                                    <div class="right">
-                                        <div>
-                                            <img src="img/cont03/cont03_05.png" alt="종이호일">
-
-                                        </div>
-                                    </div> <!-- .right end -->
-
-                                </div> <!-- .flex end -->
-                            </div> <!-- .inner -->
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="inner">
-                                <div class="flex">
-                                    <div class="left">
-                                        <h3>스탠드 침칠봉 상세페이지</h3>
-                                        <p>상세페이지 제작 및 디자인</p>
-                                        <div class="left_inner">
-
-                                            <div class="li1">
-                                                <span>기여도</span>
-                                                <div>100%</div>
-                                            </div>
-
-                                            <div class="li1">
-                                                <span>TOOL</span>
-                                                <div>Photoshop, Illustrator</div>
-                                            </div>
-
-                                            <div class="li1">
-                                                <span>COLOR</span>
-                                                <div>
-                                                    <img src="img/cont03/06_01.png" alt="">
-                                                </div>
-                                            </div>
-
-                                            <div class="li1">
-                                                <span>PRODUCT</span>
-                                                <div>스탠드 침칠봉</div>
-                                            </div>
-
-                                        </div> <!-- .left_inner end -->
-
-                                        <div class="text">
-                                            <p>침칠봉은 막대기에 여러개의 침이 있어서 분쇄돼 나오는 <br>
-                                                원두의 뭉침을 풀어주는 역할을 하기 위한 도구 입니다. </p>
-                                        </div> <!-- .text -->
-
-                                        <div class="btn">
-                                            <a href="img/page/06.jpg" target="_blank">상세페이지</a>
-                                        </div> <!-- .btn end -->
-                                    </div> <!-- .left end -->
-
-                                    <div class="right">
-                                        <div>
-                                            <img src="img/cont03/cont03_06.png" alt="종이호일">
-
-                                        </div>
-                                    </div> <!-- .right end -->
-
-                                </div> <!-- .flex end -->
-                            </div> <!-- .inner -->
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="inner">
-                                <div class="flex">
-                                    <div class="left">
-                                        <h3>하와이 유기농 노니주스 상세페이지</h3>
-                                        <p>상세페이지 제작 및 디자인</p>
-                                        <div class="left_inner">
-
-                                            <div class="li1">
-                                                <span>기여도</span>
-                                                <div>100%</div>
-                                            </div>
-
-                                            <div class="li1">
-                                                <span>TOOL</span>
-                                                <div>Photoshop, Illustrator</div>
-                                            </div>
-
-                                            <div class="li1">
-                                                <span>COLOR</span>
-                                                <div>
-                                                    <img src="img/cont03/07_01.png" alt="">
-                                                    <img src="img/cont03/07_02.png" alt="">
-                                                </div>
-                                            </div>
-
-                                            <div class="li1">
-                                                <span>PRODUCT</span>
-                                                <div>하와이 유기농 노니주스</div>
-                                            </div>
-
-                                        </div> <!-- .left_inner end -->
-
-                                        <div class="text">
-                                            <p>웰연구소 하와이 유기농 노니주스는 미국 농무성(USDA)의 <br>
-                                                엄격한 유기농 프로그램(NOP)를 이수하고 철저한 품질관리로 <br>
-                                                유기농 인증마크를 획득한 인증 제품!</p>
-                                        </div> <!-- .text -->
-
-                                        <div class="btn">
-                                            <a href="img/page/07.jpg" target="_blank">상세페이지</a>
-                                        </div> <!-- .btn end -->
-                                    </div> <!-- .left end -->
-
-                                    <div class="right">
-                                        <div>
-                                            <img src="img/cont03/cont03_07.png" alt="종이호일">
-
-                                        </div>
-                                    </div> <!-- .right end -->
-
-                                </div> <!-- .flex end -->
-                            </div> <!-- .inner -->
-                        </div>
-
-                    </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                </div>
-            </section> <!-- .cont03 end -->
-
             <section class="cont04">
 
                 <div class="inner">
@@ -681,7 +311,7 @@
                             <div class="btn">
 
                                 <a href="https://hoya947.github.io/Project5/" target="_blank">홈페이지</a>
-
+                                <a href="#" target="_blank">프로세스</a>
                             </div> <!-- .btn end -->
 
                         </div> <!-- .text end -->
@@ -787,7 +417,7 @@
 
                                 <div>
                                     <p>사용프로그램</p>
-                                    <span>HTML, CSS, jQuery, PSD</span>
+                                    <span>HTML, CSS, jQuery, Figma</span>
                                 </div>
                             </div>
 
@@ -805,6 +435,437 @@
 
             </section> <!-- .cont04 end -->
 
+            <section class="cont05">
+
+                <div class="inner">
+
+                    <h1>Graphic design</h1>
+
+                    <div class="swiper mySwiper2">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <img src="img/cont05/01.jpg" alt="폴리곤">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="img/cont05/02.jpg" alt="아이언맨">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="img/cont05/03.jpg" alt="디카프리오">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="img/cont05/04.jpg" alt="전시회이미지">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="img/cont05/05.jpg" alt="kt행사 포스터">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div> <!-- .inner end -->
+
+            </section> <!-- .cont05 end -->
+
+            <section class="cont03">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="inner">
+                                <div class="flex">
+                                    <div class="left">
+                                        <h3>종이호일 상세페이지</h3>
+                                        <p>상세페이지 제작 및 디자인</p>
+                                        <div class="left_inner">
+
+                                            <div class="li1">
+                                                <span>기여도</span>
+                                                <div>100%</div>
+                                            </div>
+
+                                            <div class="li1">
+                                                <span>TOOL</span>
+                                                <div>Photoshop, Illustrator</div>
+                                            </div>
+
+                                            <div class="li1">
+                                                <span>COLOR</span>
+                                                <div>
+                                                    <img src="img/cont03/01_01.png" alt="">
+                                                    <img src="img/cont03/01_02.png" alt="">
+                                                    <img src="img/cont03/01_03.png" alt="">
+                                                </div>
+                                            </div>
+
+                                            <div class="li1">
+                                                <span>PRODUCT</span>
+                                                <div>에어프라이어 종이호일</div>
+                                            </div>
+
+                                        </div> <!-- .left_inner end -->
+
+                                        <div class="text">
+                                            <p>많은 연령층들에게 인기가 많은 에어프라이어 <br />
+                                                그중에서 빠질 수 없는 최고의 필수 템 종이호일</p>
+                                        </div> <!-- .text -->
+
+                                        <div class="btn">
+                                            <a href="img/page/01.pdf" target="_blank">상세페이지</a>
+                                        </div> <!-- .btn end -->
+                                    </div> <!-- .left end -->
+
+                                    <div class="right">
+                                        <div>
+                                            <img src="img/cont03/cont03_01.png" alt="종이호일">
+
+                                        </div>
+                                    </div> <!-- .right end -->
+
+                                </div> <!-- .flex end -->
+                            </div> <!-- .inner -->
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="inner">
+                                <div class="flex">
+                                    <div class="left">
+                                        <h3>도라지즙 상세페이지</h3>
+                                        <p>상세페이지 제작 및 디자인</p>
+                                        <div class="left_inner">
+
+
+                                            <div class="li1">
+                                                <span>기여도</span>
+                                                <div>100%</div>
+                                            </div>
+
+                                            <div class="li1">
+                                                <span>TOOL</span>
+                                                <div>Photoshop, Illustrator</div>
+                                            </div>
+
+                                            <div class="li1">
+                                                <span>COLOR</span>
+                                                <div>
+                                                    <img src="img/cont03/02_01.png" alt="">
+                                                    <img src="img/cont03/02_02.png" alt="">
+                                                </div>
+                                            </div>
+
+                                            <div class="li1">
+                                                <span>PRODUCT</span>
+                                                <div>도라지즙</div>
+                                            </div>
+
+                                        </div> <!-- .left_inner end -->
+
+                                        <div class="text">
+                                            <p>영양이 풍부하고 그 중에서도 더욱 귀한 <br />
+                                                5년근 도라지만 엄선하여 만든 도라지즙</p>
+                                        </div> <!-- .text -->
+
+                                        <div class="btn">
+                                            <a href="img/page/02.pdf" target="_blank">상세페이지</a>
+                                        </div> <!-- .btn end -->
+                                    </div> <!-- .left end -->
+
+                                    <div class="right">
+                                        <div>
+                                            <img src="img/cont03/cont03_02.png" alt="종이호일">
+
+                                        </div>
+                                    </div> <!-- .right end -->
+
+                                </div> <!-- .flex end -->
+                            </div> <!-- .inner -->
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="inner">
+                                <div class="flex">
+                                    <div class="left">
+                                        <h3>흑마늘즙 상세페이지</h3>
+                                        <p>상세페이지 제작 및 디자인</p>
+                                        <div class="left_inner">
+
+                                            <div class="li1">
+                                                <span>기여도</span>
+                                                <div>100%</div>
+                                            </div>
+
+                                            <div class="li1">
+                                                <span>TOOL</span>
+                                                <div>Photoshop, Illustrator</div>
+                                            </div>
+
+                                            <div class="li1">
+                                                <span>COLOR</span>
+                                                <div>
+                                                    <img src="img/cont03/03_01.png" alt="">
+                                                    <img src="img/cont03/03_02.png" alt="">
+                                                </div>
+                                            </div>
+
+                                            <div class="li1">
+                                                <span>PRODUCT</span>
+                                                <div>흑마늘즙</div>
+                                            </div>
+
+                                        </div> <!-- .left_inner end -->
+
+                                        <div class="text">
+                                            <p>물 많이 탄 맹물같은 건강즙이 아닙니다. <br>
+                                                착향료, 설탕 등을 넣어 진한 맛을 흉내내지 않습니다. <br>
+                                                정직하게 만든 흑마늘즙</p>
+                                        </div> <!-- .text -->
+
+                                        <div class="btn">
+                                            <a href="img/page/03.pdf" target="_blank">상세페이지</a>
+                                        </div> <!-- .btn end -->
+                                    </div> <!-- .left end -->
+
+                                    <div class="right">
+                                        <div>
+                                            <img src="img/cont03/cont03_03.png" alt="종이호일">
+
+                                        </div>
+                                    </div> <!-- .right end -->
+
+                                </div> <!-- .flex end -->
+                            </div> <!-- .inner -->
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="inner">
+                                <div class="flex">
+                                    <div class="left">
+                                        <h3>산수유즙 상세페이지</h3>
+                                        <p>상세페이지 제작 및 디자인</p>
+                                        <div class="left_inner">
+
+                                            <div class="li1">
+                                                <span>기여도</span>
+                                                <div>100%</div>
+                                            </div>
+
+                                            <div class="li1">
+                                                <span>TOOL</span>
+                                                <div>Photoshop, Illustrator</div>
+                                            </div>
+
+                                            <div class="li1">
+                                                <span>COLOR</span>
+                                                <div>
+                                                    <img src="img/cont03/04_01.png" alt="">
+                                                    <img src="img/cont03/04_02.png" alt="">
+                                                </div>
+                                            </div>
+
+                                            <div class="li1">
+                                                <span>PRODUCT</span>
+                                                <div>구례산 산수유</div>
+                                            </div>
+
+                                        </div> <!-- .left_inner end -->
+
+                                        <div class="text">
+                                            <p>착색료를 넣거나 설탕 등을 넣어 진한색과 맛을 흉내 낸 산수유즙이 아닙니다<br />
+                                                산수유열매를 많이 넣어 만든 100% 구례산 진한 산수유즙</p>
+                                        </div> <!-- .text -->
+
+                                        <div class="btn">
+                                            <a href="img/page/04.pdf" target="_blank">상세페이지</a>
+                                        </div> <!-- .btn end -->
+                                    </div> <!-- .left end -->
+
+                                    <div class="right">
+                                        <div>
+                                            <img src="img/cont03/cont03_04.png" alt="종이호일">
+
+                                        </div>
+                                    </div> <!-- .right end -->
+
+                                </div> <!-- .flex end -->
+                            </div> <!-- .inner -->
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="inner">
+                                <div class="flex">
+                                    <div class="left">
+                                        <h3>호박즙 상세페이지</h3>
+                                        <p>상세페이지 제작 및 디자인</p>
+                                        <div class="left_inner">
+
+                                            <div class="li1">
+                                                <span>기여도</span>
+                                                <div>100%</div>
+                                            </div>
+
+                                            <div class="li1">
+                                                <span>TOOL</span>
+                                                <div>Photoshop, Illustrator</div>
+                                            </div>
+
+                                            <div class="li1">
+                                                <span>COLOR</span>
+                                                <div>
+                                                    <img src="img/cont03/05_01.png" alt="">
+                                                    <img src="img/cont03/05_02.png" alt="">
+                                                </div>
+                                            </div>
+
+                                            <div class="li1">
+                                                <span>PRODUCT</span>
+                                                <div>국내산 100% 호박즙</div>
+                                            </div>
+
+                                        </div> <!-- .left_inner end -->
+
+                                        <div class="text">
+                                            <p>인위적으로 열이나 압력을 가하지않고<br />
+                                                호박을 5시간 동안 효소로 분해하는 효소발효공법을 <br>
+                                                통해 생산한 호박즙
+                                            </p>
+                                        </div> <!-- .text -->
+
+                                        <div class="btn">
+                                            <a href="img/page/05.pdf" target="_blank">상세페이지</a>
+                                        </div> <!-- .btn end -->
+                                    </div> <!-- .left end -->
+
+                                    <div class="right">
+                                        <div>
+                                            <img src="img/cont03/cont03_05.png" alt="종이호일">
+
+                                        </div>
+                                    </div> <!-- .right end -->
+
+                                </div> <!-- .flex end -->
+                            </div> <!-- .inner -->
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="inner">
+                                <div class="flex">
+                                    <div class="left">
+                                        <h3>스탠드 침칠봉 상세페이지</h3>
+                                        <p>상세페이지 제작 및 디자인</p>
+                                        <div class="left_inner">
+
+                                            <div class="li1">
+                                                <span>기여도</span>
+                                                <div>100%</div>
+                                            </div>
+
+                                            <div class="li1">
+                                                <span>TOOL</span>
+                                                <div>Photoshop, Illustrator</div>
+                                            </div>
+
+                                            <div class="li1">
+                                                <span>COLOR</span>
+                                                <div>
+                                                    <img src="img/cont03/06_01.png" alt="">
+                                                </div>
+                                            </div>
+
+                                            <div class="li1">
+                                                <span>PRODUCT</span>
+                                                <div>스탠드 침칠봉</div>
+                                            </div>
+
+                                        </div> <!-- .left_inner end -->
+
+                                        <div class="text">
+                                            <p>침칠봉은 막대기에 여러개의 침이 있어서 분쇄돼 나오는 <br>
+                                                원두의 뭉침을 풀어주는 역할을 하기 위한 도구 입니다. </p>
+                                        </div> <!-- .text -->
+
+                                        <div class="btn">
+                                            <a href="img/page/06.pdf" target="_blank">상세페이지</a>
+                                        </div> <!-- .btn end -->
+                                    </div> <!-- .left end -->
+
+                                    <div class="right">
+                                        <div>
+                                            <img src="img/cont03/cont03_06.png" alt="종이호일">
+
+                                        </div>
+                                    </div> <!-- .right end -->
+
+                                </div> <!-- .flex end -->
+                            </div> <!-- .inner -->
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="inner">
+                                <div class="flex">
+                                    <div class="left">
+                                        <h3>하와이 유기농 노니주스 상세페이지</h3>
+                                        <p>상세페이지 제작 및 디자인</p>
+                                        <div class="left_inner">
+
+                                            <div class="li1">
+                                                <span>기여도</span>
+                                                <div>100%</div>
+                                            </div>
+
+                                            <div class="li1">
+                                                <span>TOOL</span>
+                                                <div>Photoshop, Illustrator</div>
+                                            </div>
+
+                                            <div class="li1">
+                                                <span>COLOR</span>
+                                                <div>
+                                                    <img src="img/cont03/07_01.png" alt="">
+                                                    <img src="img/cont03/07_02.png" alt="">
+                                                </div>
+                                            </div>
+
+                                            <div class="li1">
+                                                <span>PRODUCT</span>
+                                                <div>하와이 유기농 노니주스</div>
+                                            </div>
+
+                                        </div> <!-- .left_inner end -->
+
+                                        <div class="text">
+                                            <p>웰연구소 하와이 유기농 노니주스는 미국 농무성(USDA)의 <br>
+                                                엄격한 유기농 프로그램(NOP)를 이수하고 철저한 품질관리로 <br>
+                                                유기농 인증마크를 획득한 인증 제품!</p>
+                                        </div> <!-- .text -->
+
+                                        <div class="btn">
+                                            <a href="img/page/07.pdf" target="_blank">상세페이지</a>
+                                        </div> <!-- .btn end -->
+                                    </div> <!-- .left end -->
+
+                                    <div class="right">
+                                        <div>
+                                            <img src="img/cont03/cont03_07.png" alt="종이호일">
+
+                                        </div>
+                                    </div> <!-- .right end -->
+
+                                </div> <!-- .flex end -->
+                            </div> <!-- .inner -->
+                        </div>
+
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </section> <!-- .cont03 end -->
+
+       
         </main>
 
         <footer>
@@ -817,7 +878,11 @@
                 </div> <!-- .top end -->
 
                 <div class="bottom">
-                    <p>2023 | PORTFOLIO </p>
+                    <p>2023 | PORTFOLIO <br />
+                        <span>본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다. <br />
+                            © 2023 Kim, Young-Ho. All Rights Reserved.</span>
+                    </p>
+
                     <h3>끝까지 봐주셔서<br> 감사합니다!</h3>
                 </div> <!-- .bottom end -->
 
