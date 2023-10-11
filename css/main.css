@@ -323,8 +323,14 @@ header .right {
 
 
 /* cont04 */
+
+.cont04 .inner {
+    position: relative;
+}
+
 .cont04 .inner>h1 {
-    margin-top: 100px;
+    position: absolute;
+    top: 100px;
     font-size: 40px;
 }
 
@@ -353,6 +359,7 @@ header .right {
 
 .cont04 .inner .item1 .text>p {
     margin-bottom: 30px;
+    line-height: 1.2;
 }
 
 .cont04 .inner .item1 .text .text_inner>div {
@@ -448,14 +455,31 @@ header .right {
 .cont05 .inner .mySwiper2 .swiper-slide {
     width: 430px;
     height: 610px;
+    position: relative;
 }
 
-.cont05 .inner .mySwiper2 .swiper-slide > img {
+
+.cont05 .inner .mySwiper2 .swiper-slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+
+.cont05 .inner .mySwiper2 .swiper-slide a > p {
+    position: absolute;
+    left: 10px;
+    bottom: 12px;
+    color: #fff;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.cont05 .inner .mySwiper2 .swiper-slide:nth-child(4) a > p,
+.cont05 .inner .mySwiper2 .swiper-slide:nth-child(6) a > p ,
+.cont05 .inner .mySwiper2 .swiper-slide:nth-child(8) a > p {
+    color: #202020;
+}
 
 /* text_slide🎈🎈🎈 */
 .text_slide p {
