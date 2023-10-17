@@ -22,6 +22,50 @@ li {
     list-style: none;
 }
 
+
+/* right_out nav 🎈 */
+.left_out {
+    position: fixed;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9;
+    font-size: 14px;
+}
+
+.left_out li a {
+    display: block;
+    margin-bottom: 10px;
+    color: #c8c8c8;
+    transition: 0.5s;
+}
+
+.left_out li a.on {
+    color: #0074e8;
+    transition: 0.5s;
+}
+
+
+/* top🎈🎈 */
+#top {
+        position: fixed;
+        bottom: 48px;
+        right: 48px;
+        color: #fff;
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+        z-index: 1000;
+        display: none;
+        text-align: center;
+        line-height: 100px;
+}
+
+#top >img {
+    border-radius: 50%;
+}
+
+
 body {
     line-height: 1;
     color: #202202;
@@ -245,6 +289,7 @@ header .right {
     width: 960px;
     height: 100%;
 }
+
 
 .cont02 .inner .box .right .list {
     position: absolute;

@@ -50,6 +50,67 @@
         $(function () {
 
 
+            $('.left_out li a').click(function () {
+
+                $('.left_out li a').removeClass('on');
+
+                $(this).addClass('on');
+            });
+
+
+            /* top */
+
+            let cont01Top = $('.cont01').offset().top;
+
+            $(window).scroll(function () {
+
+                if (cont01Top < $(window).scrollTop()) {
+                    $('#top').fadeIn().css({
+                        'display': 'block'
+                    });
+                } else {
+                    $('#top').fadeOut()
+                }
+
+            }); //window.scroll();
+
+
+            $('#top').click(function () {
+                $('html,body').animate({
+                    scrollTop: 0
+                }, 2000);
+            })
+
+
+            /* juavascript */
+
+            let gnb = document.querySelector('.left_out');
+            let gnbIndex = document.querySelectorAll('li a');
+
+            let cont = document.querySelectorAll('.cont');
+
+            window.onscroll = function () {
+                let scrollbar = window.scrollY;
+
+                for (let i = 0; i < cont.length; i++) {
+                    if (cont[i].offsetTop <= scrollbar + 100) {
+                        gnbIndex.forEach(function (item) {
+                            item.classList.remove('on')
+                        })
+
+                        gnbIndex[i].classList.add('on')
+
+                    } else if (scrollbar <= 0) {
+                        gnbIndex.forEach(function (item) {
+                            item.classList.remove('on');
+                        })
+                        gnbIndex[0].classList.add('on');
+                    }
+                }
+            }
+
+            /* juavascript end */
+
 
             String.prototype.toKorChars = function () {
                 var cCho = ['ㄱ', 'ㄲ', 'ㄴ', 'ㄷ', 'ㄸ', 'ㄹ', 'ㅁ', 'ㅂ', 'ㅃ', 'ㅅ', 'ㅆ', 'ㅇ', 'ㅈ', 'ㅉ', 'ㅊ', 'ㅋ', 'ㅌ', 'ㅍ', 'ㅎ'],
@@ -154,6 +215,8 @@
             });
 
 
+
+
         }); //jQuery end
 
 
@@ -166,11 +229,23 @@
 
 <body>
 
+    <ul class="left_out">
+        <li><a href="#box1" class="on">Portfolio</a></li>
+        <li><a href="#box2">Introduce</a></li>
+        <li><a href="#box3">Projects</a></li>
+        <li><a href="#box4">Graphic design</a></li>
+        <li><a href="#box5">Detailed page</a></li>
+    </ul> <!-- .right end -->
+
     <div id="wrap">
+
+        <div id="top">
+            <img src="img/top.gif" alt="top">
+        </div> <!-- #top end -->
 
         <main>
 
-            <header>
+            <header class="cont cont01" id="box1">
 
                 <h1><img src="img/logo.png" alt="kimyoungho"></h1>
 
@@ -190,12 +265,14 @@
                     <h3><img src="img/2.png" alt="2023"></h3>
                 </div> <!-- .right end -->
 
+
+
             </header>
 
-            <section class="cont02">
+            <section class="cont cont02" id="box2">
 
 
-                    <img src="img/my.png" alt="캐릭터">
+                <img src="img/my.png" alt="캐릭터">
 
                 <div class="inner">
                     <div class="box">
@@ -226,7 +303,8 @@
 
                         <div class="right">
                             <div class="list">
-                                <div class="item"  data-aos="flip-up">
+
+                                <div class="item">
                                     <h3>Education</h3>
                                     <div>
                                         <ul>
@@ -238,7 +316,7 @@
                                     </div>
                                 </div> <!-- .item end -->
 
-                                <div class="item" data-aos="flip-up">
+                                <div class="item">
                                     <h3>Career</h3>
                                     <div>
                                         <ul>
@@ -248,7 +326,7 @@
                                     </div>
                                 </div> <!-- .item end -->
 
-                                <div class="item" data-aos="flip-up">
+                                <div class="item">
                                     <h3>Activity</h3>
 
                                     <div>
@@ -258,7 +336,7 @@
                                     </div>
                                 </div> <!-- .item end -->
 
-                                <div class="item"  data-aos="flip-up">
+                                <div class="item">
                                     <h3>Skill</h3>
 
                                     <div>
@@ -281,7 +359,7 @@
 
             </section> <!-- .cont02 end -->
 
-            <section class="cont04">
+            <section class="cont cont04" id="box3">
 
                 <div class="inner">
 
@@ -509,7 +587,7 @@
 
             </section> <!-- .cont04 end -->
 
-            <section class="cont05">
+            <section class="cont cont05" id="box4">
 
                 <div class="inner">
 
@@ -595,7 +673,7 @@
 
             </section> <!-- .cont05 end -->
 
-            <section class="cont03">
+            <section class="cont cont03" id="box5">
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
 
