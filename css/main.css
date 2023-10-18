@@ -322,7 +322,7 @@ header .right {
 
 .cont02 .inner .box .right .list .item.on3 {
     opacity: 1;
-    transition: 0.5s 2s;
+    transition: 0.5s 1.5s;
 }
 
 
@@ -450,7 +450,6 @@ header .right {
 }
 
 
-
 .cont04 .inner .item1>img {
     width: 975px;
     height: 555px;
@@ -558,6 +557,14 @@ header .right {
     color: #b3a290;
 }
 
+.cont04 .inner .li2 .sub img {
+    width: 250px;
+    position: absolute;
+    right: 750px;
+    bottom: 130px;
+    z-index: 1;
+}
+
 .cont04 .inner .li2 .pc_img {
     background: url(../img/cont04/pc_02.png) no-repeat;
     width: 440px;
@@ -604,6 +611,8 @@ header .right {
     color: #fff;
     border: 1px solid #b3a290;
 }
+
+
 
 
 /* 이솝👓 */
@@ -758,8 +767,6 @@ header .right {
 
 
 
-
-
 /* cont05🧨🧨🧨 */
 .cont05 {
     margin-bottom: 100px;
@@ -792,7 +799,15 @@ header .right {
     color: #fff;
     font-weight: normal;
     font-size: 12px;
+    display: flex;
 }
+
+.cont05 .inner .mySwiper2 .swiper-slide a > p img {
+    padding-right: 5px;
+    width: 25px;
+}
+
+
 
 .cont05 .inner .mySwiper2 .swiper-slide:nth-child(4) a > p,
 .cont05 .inner .mySwiper2 .swiper-slide:nth-child(6) a > p ,
