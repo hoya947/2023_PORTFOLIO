@@ -50,9 +50,9 @@
         $(function () {
 
 
-            $('.left_out li a').click(function () {
+            $('.right_out li a').click(function () {
 
-                $('.left_out li a').removeClass('on');
+                $('.right_out li a').removeClass('on');
 
                 $(this).addClass('on');
             });
@@ -112,6 +112,26 @@
             /* juavascript end */
 
 
+            /* 스크롤 콘텐츠 나타나기 */
+            let cont02Top = $('.cont02').offset().top;
+            let item = $('.cont02 .inner .box .right .list .item');
+
+            $(window).scroll(function () {
+
+                let scrollbar = $(window).scrollTop();
+
+                item.each(function (index) {
+                    if (cont02Top - 100 <= scrollbar) {
+                        $(this).addClass('on' + index)
+                    } else if (scrollbar == 0)
+                        item.removeClass('on' + index);
+                });
+
+            });
+
+            /* 스크롤 콘텐츠 나타나기 끝 */
+
+
             String.prototype.toKorChars = function () {
                 var cCho = ['ㄱ', 'ㄲ', 'ㄴ', 'ㄷ', 'ㄸ', 'ㄹ', 'ㅁ', 'ㅂ', 'ㅃ', 'ㅅ', 'ㅆ', 'ㅇ', 'ㅈ', 'ㅉ', 'ㅊ', 'ㅋ', 'ㅌ', 'ㅍ', 'ㅎ'],
                     cJung = ['ㅏ', 'ㅐ', 'ㅑ', 'ㅒ', 'ㅓ', 'ㅔ', 'ㅕ', 'ㅖ', 'ㅗ', 'ㅘ', 'ㅙ', 'ㅚ', 'ㅛ', 'ㅜ', 'ㅝ', 'ㅞ', 'ㅟ', 'ㅠ', 'ㅡ', 'ㅢ', 'ㅣ'],
@@ -164,10 +184,11 @@
             var i = 0;
             var j = 0;
 
-            //총글자수
+
+            //총글자수🧨
             var imax = typeing1.length;
 
-            var inter = setInterval(typi, 150);
+            var inter = setInterval(typi, 250);
 
 
             function typi() {
@@ -187,7 +208,8 @@
                 }
             }
 
-            //슬라이드
+
+            //슬라이드🧨
             var swiper = new Swiper(".mySwiper", {
                 navigation: {
                     nextEl: ".swiper-button-next",
@@ -196,7 +218,7 @@
             });
 
 
-            //슬라이드2
+            //슬라이드2🧨
             var swiper = new Swiper(".mySwiper2", {
                 effect: "coverflow",
                 grabCursor: true,
@@ -229,7 +251,7 @@
 
 <body>
 
-    <ul class="left_out">
+    <ul class="right_out">
         <li><a href="#box1" class="on">Portfolio</a></li>
         <li><a href="#box2">Introduce</a></li>
         <li><a href="#box3">Projects</a></li>
@@ -276,6 +298,7 @@
 
                 <div class="inner">
                     <div class="box">
+
                         <div class="left">
                             <div class="res">
                                 안녕하세요! <br>
@@ -303,7 +326,6 @@
 
                         <div class="right">
                             <div class="list">
-
                                 <div class="item">
                                     <h3>Education</h3>
                                     <div>
@@ -339,22 +361,50 @@
                                 <div class="item">
                                     <h3>Skill</h3>
 
-                                    <div>
-                                        <img src="img/html.png" alt="hmtl">
-                                        <img src="img/css.png" alt="css">
-                                        <img src="img/js.png" alt="javascript">
-                                        <img src="img/jq.png" alt="jQuery">
-                                        <img src="img/git.png" alt="git">
-                                        <img src="img/fi.png" alt="Figma">
-                                        <img src="img/ps.png" alt="Photoshop">
-                                        <img src="img/ai.png" alt="Illustrator">
-                                    </div>
+                                    <div class="icon">
+
+                                        <div>
+                                            <img src="img/html.png" alt="hmtl">
+                                        </div>
+
+                                        <div>
+                                            <img src="img/css.png" alt="css">
+                                        </div>
+
+                                        <div>
+                                            <img src="img/js.png" alt="javascript">
+                                        </div>
+
+                                        <div>
+                                            <img src="img/jq.png" alt="jQuery">
+                                        </div>
+
+                                        <div>
+                                            <img src="img/git.png" alt="git">
+                                        </div>
+
+                                        <div>
+                                            <img src="img/fi.png" alt="Figma">
+                                        </div>
+
+                                        <div>
+                                            <img src="img/ps.png" alt="Photoshop">
+                                        </div>
+
+                                        <div>
+                                            <img src="img/ai.png" alt="Illustrator">
+                                        </div>
+
+                                    </div> <!-- .icon end -->
+
                                 </div> <!-- .item end -->
 
                             </div> <!-- .list end -->
 
                         </div> <!-- .right end -->
+
                     </div> <!-- .box end -->
+
                 </div> <!-- .inner end -->
 
             </section> <!-- .cont02 end -->
@@ -365,10 +415,14 @@
 
                     <h1>Projects</h1>
 
-                    <div class="item1 li3">
-                        <div data-aos="fade-up">
-                            <img src="img/cont04/02.png" alt="내셔널지오그래픽">
+                    <div class="item1 li1">
+                        <div data-aos="fade-right">
+                            <img src="img/cont04/na_bg.png" alt="내셔널지오그래픽">
                         </div>
+
+                        <div class="pc_img" data-aos="fade-up">
+                            <span></span>
+                        </div> <!-- .pc_img end -->
 
                         <div class="text" data-aos="fade-left">
                             <h3>National Geographic</h3>
@@ -408,11 +462,15 @@
 
                     </div> <!-- .item1 end -->
 
-                    <div class="item1 li6">
+                    <div class="item1 li2">
 
-                        <div data-aos="fade-up">
-                            <img src="img/cont04/05.png" alt="신라호텔_제주">
+                        <div data-aos="fade-right">
+                            <img src="img/cont04/sh_bg.png" alt="신라호텔제주">
                         </div>
+
+                        <div class="pc_img" data-aos="fade-up">
+                            <span></span>
+                        </div> <!-- .pc_img end -->
 
 
                         <div class="text" data-aos="fade-left">
@@ -453,11 +511,15 @@
 
                     </div> <!-- .item1 end -->
 
-                    <div class="item1 li4">
+                    <div class="item1 li3">
 
-                        <div data-aos="fade-up">
-                            <img src="img/cont04/03.png" alt="이솝">
+                        <div data-aos="fade-right">
+                            <img src="img/cont04/as_bg.png" alt="이솝">
                         </div>
+
+                        <div class="pc_img" data-aos="fade-up">
+                            <span></span>
+                        </div> <!-- .pc_img end -->
 
                         <div class="text" data-aos="fade-left">
                             <h3>Aesop</h3>
@@ -496,11 +558,15 @@
 
                     </div> <!-- .item1 end -->
 
-                    <div class="item1 li5">
+                    <div class="item1 li4">
 
-                        <div data-aos="fade-up">
-                            <img src="img/cont04/04.png" alt="위드굿즈">
+                        <div data-aos="fade-right">
+                            <img src="img/cont04/wi_bg.png" alt="위드굿즈">
                         </div>
+
+                        <div class="pc_img" data-aos="fade-up">
+                            <span></span>
+                        </div> <!-- .pc_img end -->
 
                         <div class="text" data-aos="fade-left">
                             <h3>Withgoods</h3>
@@ -538,11 +604,15 @@
 
                     </div> <!-- .item1 end -->
 
-                    <div class="item1 li2">
+                    <div class="item1 li5">
 
-                        <div data-aos="fade-up">
-                            <img src="img/cont04/01.png" alt="푸조">
+                        <div data-aos="fade-right">
+                            <img src="img/cont04/pu_bg.png" alt="푸조">
                         </div>
+
+                        <div class="pc_img" data-aos="fade-up">
+                            <span></span>
+                        </div> <!-- .pc_img end -->
 
                         <div class="text" data-aos="fade-left">
                             <h3>PEUGEOT</h3>
@@ -685,17 +755,17 @@
                                         <p>상세페이지 제작 및 디자인</p>
                                         <div class="left_inner">
 
-                                            <div class="li1">
+                                            <div class="li1" data-aos="fade-down">
                                                 <span>기여도</span>
                                                 <div>100%</div>
                                             </div>
 
-                                            <div class="li1">
+                                            <div class="li1" data-aos="fade-down">
                                                 <span>TOOL</span>
                                                 <div>Photoshop, Illustrator</div>
                                             </div>
 
-                                            <div class="li1">
+                                            <div class="li1" data-aos="fade-down">
                                                 <span>COLOR</span>
                                                 <div>
                                                     <img src="img/cont03/01_01.png" alt="color1_1">
@@ -704,25 +774,25 @@
                                                 </div>
                                             </div>
 
-                                            <div class="li1">
+                                            <div class="li1" data-aos="fade-down">
                                                 <span>PRODUCT</span>
                                                 <div>에어프라이어 종이호일</div>
                                             </div>
 
                                         </div> <!-- .left_inner end -->
 
-                                        <div class="text">
+                                        <div class="text" data-aos="fade-down">
                                             <p>많은 연령층들에게 인기가 많은 에어프라이어 <br />
                                                 그중에서 빠질 수 없는 최고의 필수 템 종이호일</p>
                                         </div> <!-- .text -->
 
-                                        <div class="btn">
+                                        <div class="btn" data-aos="fade-down">
                                             <a href="img/page/01.pdf" target="_blank">상세페이지</a>
                                         </div> <!-- .btn end -->
                                     </div> <!-- .left end -->
 
                                     <div class="right">
-                                        <div>
+                                        <div data-aos="fade-down">
                                             <img src="img/cont03/cont03_01.png" alt="종이호일">
 
                                         </div>

@@ -22,25 +22,29 @@ li {
     list-style: none;
 }
 
+:root {
+    --swiper-theme-color: #5a9dee;
+    --swiper-navigation-size: 40px;
+}
 
 /* right_out nav 🎈 */
-.left_out {
+.right_out {
     position: fixed;
-    left: 50px;
+    right: 50px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 9;
     font-size: 14px;
 }
 
-.left_out li a {
+.right_out li a {
     display: block;
     margin-bottom: 10px;
     color: #c8c8c8;
     transition: 0.5s;
 }
 
-.left_out li a.on {
+.right_out li a.on {
     color: #0074e8;
     transition: 0.5s;
 }
@@ -143,8 +147,6 @@ header .inner .text {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
-
 
 
 header .inner .ball2 {
@@ -299,7 +301,31 @@ header .right {
 
 .cont02 .inner .box .right .list .item {
     margin-top: 50px;
+    opacity: 0;
 }
+
+
+.cont02 .inner .box .right .list .item.on0 {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.cont02 .inner .box .right .list .item.on1 {
+    opacity: 1;
+    transition: 0.5s 0.5s;
+}
+
+.cont02 .inner .box .right .list .item.on2 {
+    opacity: 1;
+    transition: 0.5s 1s;
+}
+
+.cont02 .inner .box .right .list .item.on3 {
+    opacity: 1;
+    transition: 0.5s 2s;
+}
+
+
 
 .cont02 .inner .box .right .list .item>h3 {
     font-size: 25px;
@@ -320,7 +346,11 @@ header .right {
 }
 
 
-.cont02 .inner .box .right .list .item:last-child>div img {
+.cont02 .inner .box .right .list .item .icon {
+    display: flex;
+}
+
+.cont02 .inner .box .right .list .item:last-child .icon div img {
     margin-right: 15px;
     width: 40px;
     height: 40px;
@@ -416,7 +446,10 @@ header .right {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
+
+
 
 .cont04 .inner .item1>img {
     width: 975px;
@@ -466,55 +499,265 @@ header .right {
     transition: 0.5s;
 }
 
-.cont04 .inner .li2 .text>h3 {
-    color: #0074e8;
+/* 내셔널지오그래픽🎨 */
+
+.cont04 .inner .li1 .pc_img {
+    background: url(../img/cont04/pc_01.png) no-repeat;
+    width: 440px;
+    height: 371px;
+    position: absolute;
+    right: 430px;
+    bottom: 150px;
+    transition: 1s;
 }
 
-.cont04 .inner .li2 .text .btn a:hover {
-    background-color: #0074e8;
-    transition: 0.5s;
-    color: #fff;
-    border: 1px solid #0074e8;
+.cont04 .inner .li1 .pc_img span {
+    background:url(../img/cont04/pc_national01.jpg) no-repeat;
+    width: 422px;
+    height: 237px;
+    position: absolute;
+    right: 9px;
+    bottom: 125px;
 }
 
-.cont04 .inner .li3 .text>h3 {
+.cont04 .inner .li1 .pc_img:hover span {
+    animation: NationalScrool 20s infinite;
+}
+
+
+@keyframes NationalScrool {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 0 -710px;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+
+}
+
+.cont04 .inner .li1 .text>h3 {
     color: #ffc501;
 }
 
-.cont04 .inner .li3 .text .btn a:hover {
+.cont04 .inner .li1 .text .btn a:hover {
     background-color: #ffc501;
     transition: 0.5s;
     color: #fff;
     border: 1px solid #ffc501;
 }
 
-.cont04 .inner .li4 .text .btn a:hover {
+
+/* 신라호텔 🥽 */
+
+.cont04 .inner .li2 .text>h3 {
+    color: #b3a290;
+}
+
+.cont04 .inner .li2 .pc_img {
+    background: url(../img/cont04/pc_02.png) no-repeat;
+    width: 440px;
+    height: 371px;
+    position: absolute;
+    right: 430px;
+    bottom: 150px;
+    transition: 1s;
+}
+
+.cont04 .inner .li2 .pc_img span {
+    background:url(../img/cont04/pc_shilla02.jpg) no-repeat;
+    width: 422px;
+    height: 237px;
+    position: absolute;
+    right: 9px;
+    bottom: 124px;
+}
+
+.cont04 .inner .li2 .pc_img:hover span {
+    animation: shScrool 20s infinite;
+}
+
+
+@keyframes shScrool {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 0 -1350px;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+
+}
+
+
+.cont04 .inner .li2 .text .btn a:hover {
+    background-color: #b3a290;
+    transition: 0.5s;
+    color: #fff;
+    border: 1px solid #b3a290;
+}
+
+
+/* 이솝👓 */
+.cont04 .inner .li3 .text .btn a:hover {
     background-color: #202020;
     transition: 0.5s;
     color: #fff;
 }
 
-.cont04 .inner .li5 .text>h3 {
+.cont04 .inner .li3 .pc_img {
+    background: url(../img/cont04/pc_03.png) no-repeat;
+    width: 440px;
+    height: 371px;
+    position: absolute;
+    right: 430px;
+    bottom: 150px;
+    transition: 1s;
+}
+
+.cont04 .inner .li3 .pc_img span {
+    background:url(../img/cont04/pc_aesop03.jpg) no-repeat;
+    width: 422px;
+    height: 237px;
+    position: absolute;
+    right: 9px;
+    bottom: 124px;
+}
+
+.cont04 .inner .li3 .pc_img:hover span {
+    animation: asScrool 20s infinite;
+}
+
+
+@keyframes asScrool {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 0 -1280px;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+
+}
+
+
+/* 위드굿즈👓 */
+.cont04 .inner .li4 .text>h3 {
     color: #b4ac9f;
 }
 
-.cont04 .inner .li5 .text .btn a:hover {
+.cont04 .inner .li4 .text .btn a:hover {
     background-color: #b4ac9f;
     transition: 0.5s;
     color: #fff;
     border: 1px solid #b4ac9f;
 }
 
-.cont04 .inner .li6 .text>h3 {
-    color: #b3a290;
+.cont04 .inner .li4 .pc_img {
+    background: url(../img/cont04/pc_04.png) no-repeat;
+    width: 440px;
+    height: 371px;
+    position: absolute;
+    right: 430px;
+    bottom: 150px;
+    transition: 1s;
 }
 
-.cont04 .inner .li6 .text .btn a:hover {
-    background-color: #b3a290;
+.cont04 .inner .li4 .pc_img span {
+    background:url(../img/cont04/pc_with04.jpg) no-repeat;
+    width: 422px;
+    height: 237px;
+    position: absolute;
+    right: 9px;
+    bottom: 124px;
+}
+
+.cont04 .inner .li4 .pc_img:hover span {
+    animation: asScrool 20s infinite;
+}
+
+
+@keyframes asScrool {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 0 -675px;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+
+}
+
+
+/* 푸조👑 */
+.cont04 .inner .li5 .text>h3 {
+    color: #0074e8;
+}
+
+.cont04 .inner .li5 .text .btn a:hover {
+    background-color: #0074e8;
     transition: 0.5s;
     color: #fff;
-    border: 1px solid #b3a290;
+    border: 1px solid #0074e8;
 }
+
+.cont04 .inner .li5 .pc_img {
+    background: url(../img/cont04/pc_05.png) no-repeat;
+    width: 440px;
+    height: 371px;
+    position: absolute;
+    right: 430px;
+    bottom: 150px;
+    transition: 1s;
+}
+
+.cont04 .inner .li5 .pc_img span {
+    background:url(../img/cont04/pc_peugeot05.jpg) no-repeat;
+    width: 422px;
+    height: 237px;
+    position: absolute;
+    right: 9px;
+    bottom: 124px;
+}
+
+.cont04 .inner .li5 .pc_img:hover span {
+    animation: puScrool 20s infinite;
+}
+
+
+@keyframes puScrool {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 0 -1395px;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+
+}
+
+
+
 
 
 /* cont05🧨🧨🧨 */
