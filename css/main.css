@@ -694,11 +694,11 @@ header .right {
 }
 
 .cont04 .inner .li4 .pc_img:hover span {
-    animation: asScrool 20s infinite;
+    animation: wiScrool 20s infinite;
 }
 
 
-@keyframes asScrool {
+@keyframes wiScrool {
     0% {
         background-position: 0 0;
     }
