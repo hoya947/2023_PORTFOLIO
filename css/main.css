@@ -132,11 +132,13 @@ header .inner .ball1 {
         background-color: #5a9dee;
         transform: translateX(300px);
         width: 50px;
+        margin-top: 50px;
     }
 
     100% {
         background-color: skyblue;
         border-radius: 0;
+        margin-top: 60px;
     }
 }
 
@@ -519,8 +521,8 @@ header .right {
     bottom: 125px;
 }
 
-.cont04 .inner .li1 .pc_img:hover span {
-    animation: NationalScrool 20s infinite;
+.cont04 .inner .li1:hover span {
+    animation: NationalScrool 25s infinite;
 }
 
 
@@ -584,8 +586,8 @@ header .right {
     bottom: 124px;
 }
 
-.cont04 .inner .li2 .pc_img:hover span {
-    animation: shScrool 20s infinite;
+.cont04 .inner .li2:hover span {
+    animation: shScrool 25s infinite;
 }
 
 
@@ -641,8 +643,8 @@ header .right {
     bottom: 124px;
 }
 
-.cont04 .inner .li3 .pc_img:hover span {
-    animation: asScrool 20s infinite;
+.cont04 .inner .li3:hover span {
+    animation: asScrool 25s infinite;
 }
 
 
@@ -693,8 +695,8 @@ header .right {
     bottom: 124px;
 }
 
-.cont04 .inner .li4 .pc_img:hover span {
-    animation: wiScrool 20s infinite;
+.cont04 .inner .li4:hover span {
+    animation: wiScrool 25s infinite;
 }
 
 
@@ -745,8 +747,8 @@ header .right {
     bottom: 124px;
 }
 
-.cont04 .inner .li5 .pc_img:hover span {
-    animation: puScrool 20s infinite;
+.cont04 .inner .li5:hover span {
+    animation: puScrool 25s infinite;
 }
 
 
